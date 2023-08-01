@@ -1,5 +1,12 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useHistory,
+} from "react-router-dom";
+
 import UseCallback from "./pages/UseCallback";
 import UseContext from "./pages/UseContext";
 import UseEffect from "./pages/UseEffect";
@@ -8,38 +15,46 @@ import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
 import PageNotFound from "./pages/PageNotFound";
 import UseState from "./pages/UseState";
+import logo from "./logo.svg";
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/">
-          {/* UseState Route */}
-          <Route index element={<UseState />} />
-          <Route path="useState" element={<UseState />} />
+    <div className="App">
+      <div className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>React Hooks</h1>
+      </div>
 
-          {/* UseCallback Route */}
-          <Route path="useCallback" element={<UseCallback />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            {/* UseState Route */}
+            <Route index element={<UseState />} />
+            <Route path="useState" element={<UseState />} />
 
-          {/* UseContext Route */}
-          <Route path="useContext" element={<UseContext />} />
+            {/* UseCallback Route */}
+            <Route path="useCallback" element={<UseCallback />} />
 
-          {/* UseEffect Route */}
-          <Route path="useEffect" element={<UseEffect />} />
+            {/* UseContext Route */}
+            <Route path="useContext" element={<UseContext />} />
 
-          {/* UseMemo Route */}
-          <Route path="useMemo" element={<UseMemo />} />
+            {/* UseEffect Route */}
+            <Route path="useEffect" element={<UseEffect />} />
 
-          {/* UseReducer Route */}
-          <Route path="useReducer" element={<UseReducer />} />
+            {/* UseMemo Route */}
+            <Route path="useMemo" element={<UseMemo />} />
 
-          {/* UseRef Route */}
-          <Route path="useRef" element={<UseRef />} />
+            {/* UseReducer Route */}
+            <Route path="useReducer" element={<UseReducer />} />
 
-          {/* Page Not Found Route */}
-          <Route path="*" element={<PageNotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+            {/* UseRef Route */}
+            <Route path="useRef" element={<UseRef />} />
+
+            {/* Page Not Found Route */}
+            <Route path="*" element={<PageNotFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }

@@ -7,6 +7,7 @@ body {
 
 .App {
   text-align: center;
+  color: white;
 }
 
 .App-logo {
@@ -19,6 +20,7 @@ body {
   height: 150px;
   padding: 20px;
   color: white;
+  border-bottom: 3px solid #ffffff;
 }
 
 .App-intro {
