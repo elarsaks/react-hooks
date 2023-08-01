@@ -1,37 +1,45 @@
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
-import fs from "fs";
-import logo from "./logo.svg";
-import path from "path";
-import React, { Component } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UseCallback from "./pages/UseCallback";
+import UseContext from "./pages/UseContext";
+import UseEffect from "./pages/UseEffect";
+import UseMemo from "./pages/UseMemo";
+import UseReducer from "./pages/UseReducer";
+import UseRef from "./pages/UseRef";
+import PageNotFound from "./pages/PageNotFound";
+import UseState from "./pages/UseState";
 
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          {/* UseState Route */}
+          <Route index element={<UseState />} />
+          <Route path="useState" element={<UseState />} />
 
-class App extends Component {
-  render() {
-    const componentFiles = fs.readdirSync(path.join(__dirname, "components"));
+          {/* UseCallback Route */}
+          <Route path="useCallback" element={<UseCallback />} />
 
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          {/* UseContext Route */}
+          <Route path="useContext" element={<UseContext />} />
 
-        <Switch>
-          {componentFiles.map((file) => {
-            const component = require(`./components/${file}`).default;
-            const routePath = "/" + path.basename(file, ".js").toLowerCase();
-            return (
-              <Route key={routePath} path={routePath} component={component} />
-            );
-          })}
-        </Switch>
-      </div>
-    );
-  }
+          {/* UseEffect Route */}
+          <Route path="useEffect" element={<UseEffect />} />
+
+          {/* UseMemo Route */}
+          <Route path="useMemo" element={<UseMemo />} />
+
+          {/* UseReducer Route */}
+          <Route path="useReducer" element={<UseReducer />} />
+
+          {/* UseRef Route */}
+          <Route path="useRef" element={<UseRef />} />
+
+          {/* Page Not Found Route */}
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
-
-export default App;
