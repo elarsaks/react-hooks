@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const DummyComponent = () => {
+export default () => {
   const buttonStyle = {
     margin: '20px', 
     border: '2px solid #61DAFB', 
@@ -46,4 +46,3 @@ const DummyComponent = () => {
   );
 };
 
-export default DummyComponent;
