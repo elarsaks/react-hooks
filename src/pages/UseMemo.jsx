@@ -1,6 +1,10 @@
 import React, { useState, useMemo } from "react";
 
 export default () => {
+  const infoStyle = {
+    color: "#61DAFB",
+  };
+
   const buttonStyle = {
     margin: "20px",
     border: "2px solid #61DAFB",
@@ -20,12 +24,13 @@ export default () => {
     borderRadius: "5px",
     padding: "10px 20px",
     fontSize: "18px",
+    cursor: "pointer",
   };
 
   // Function that simulates a slow operation (for demonstration purposes)
   function slowFunction(num) {
     console.log("Calling Slow Function");
-    for (let i = 0; i <= 1000000000; i++) {}
+    for (let i = 0; i <= 2000000000; i++) {}
     return num * 2;
   }
 
@@ -35,8 +40,13 @@ export default () => {
   // State to manage the theme
   const [dark, setDark] = useState(false);
 
-  // Function that simulates a slow operation
-  const doubleNumber = slowFunction(number);
+  // Using cache number values to avoid calling the slow function on every render
+  const doubleNumber = useMemo(() => {
+    return slowFunction(number);
+  }, [number]);
+
+  // Using this line instead of the one above will cause the slow function to be called on every render
+  //  const doubleNumber = slowFunction(number);
 
   // Memoized styles to change the theme dynamically
   const themeStyles = useMemo(
@@ -55,6 +65,11 @@ export default () => {
 
   return (
     <>
+      <h2 style={infoStyle}>
+        When updating the theme, the background colors change quickly because
+        the number value is taken from cache. However, when changing the number,
+        the component takes a bit of time to re-render.
+      </h2>
       {/* Input field to change the number */}
       <input
         type="number"
@@ -70,7 +85,7 @@ export default () => {
         Change Theme
       </button>
       {/* Display the doubled number with the dynamically applied theme */}
-      <div style={themeStyles}>{doubleNumber}</div>
+      <div style={themeStyles}>Double the input: {doubleNumber}</div>
     </>
   );
 };
