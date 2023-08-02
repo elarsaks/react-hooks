@@ -21,6 +21,13 @@ export default () => {
       .then((response) => response.json())
       .then((json) => setItems(json));
 
+    // useEffect can return a function that will be called when the component unmounts.
+    return () => {
+      // This is a good place to clean up any subscriptions or timers.
+
+      console.log("Resource type changed.");
+    };
+
     // The second argument of useEffect is an array of dependencies.
   }, [resourceType]); // Only run the effect if resourceType changes.
 
