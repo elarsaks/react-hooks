@@ -11,13 +11,11 @@ export default function AppHeader() {
 
   return (
     <div className="App-header">
-      <div className="header-content">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>React Hooks</h1>
-      </div>
+      <img src={logo} className="App-logo" alt="logo" />
+      <h1>React Hooks</h1>
 
       <select className="header-selector" onChange={handleRouteChange}>
-        <option value="/">Home</option>
+        <option value="/useState">Home</option>
         <option value="/useState">UseState</option>
         <option value="/useCallback">UseCallback</option>
         <option value="/useContext">UseContext</option>

@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import UseCallback from "./pages/UseCallback";
 import UseContext from "./pages/UseContext";
@@ -17,10 +17,12 @@ export default function App() {
       <div className="App">
         <AppHeader />
         <Routes>
-          <Route path="/">
+          <Route>
+            {/* Redirect from base route to useState */}
+            <Route path="/" element={<Navigate to="/useState" />} />
+
             {/* UseState Route */}
-            <Route index element={<UseState />} />
-            <Route path="useState" element={<UseState />} />
+            <Route path="useState" element={<UseState />} index />
 
             {/* UseCallback Route */}
             <Route path="useCallback" element={<UseCallback />} />
