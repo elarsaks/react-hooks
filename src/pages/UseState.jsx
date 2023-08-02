@@ -21,17 +21,14 @@ const DummyComponent = () => {
     padding: '10px 20px',  
   };
 
-  // Add state for the number
   const [count, setCount] = useState(0);
 
-  // Function to handle the increment button click
   const handleIncrement = () => {
-    setCount(count + 1);
+    setCount((previousCount) =>  previousCount + 1);
   };
 
-  // Function to handle the decrement button click
   const handleDecrement = () => {
-    setCount(count - 1);
+    setCount((previousCount) =>  previousCount - 1);
   };
 
   return (
