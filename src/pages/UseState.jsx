@@ -21,12 +21,18 @@ const DummyComponent = () => {
     padding: '10px 20px',  
   };
 
-  const [count, setCount] = useState(0);
+  // Pass state initial value as a function to useState, 
+  // so the function is only called on the initial render.
+  const [count, setCount] = useState(() => 0);
 
+  // Pass a function to the setter of useState,
+  // so the function is only called on the initial render.
   const handleIncrement = () => {
     setCount((previousCount) =>  previousCount + 1);
   };
 
+  // Pass a function to the setter of useState,
+  // so the function is only called on the initial render.
   const handleDecrement = () => {
     setCount((previousCount) =>  previousCount - 1);
   };
