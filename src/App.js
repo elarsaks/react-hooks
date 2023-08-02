@@ -9,39 +9,13 @@ import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
 import PageNotFound from "./pages/PageNotFound";
 import UseState from "./pages/UseState";
-import logo from "./logo.svg";
-
-function Header() {
-  const navigate = useNavigate();
-
-  const handleRouteChange = (event) => {
-    navigate(event.target.value);
-  };
-
-  return (
-    <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1>React Hooks</h1>
-
-      <select onChange={handleRouteChange}>
-        <option value="/">Home</option>
-        <option value="/useState">UseState</option>
-        <option value="/useCallback">UseCallback</option>
-        <option value="/useContext">UseContext</option>
-        <option value="/useEffect">UseEffect</option>
-        <option value="/useMemo">UseMemo</option>
-        <option value="/useReducer">UseReducer</option>
-        <option value="/useRef">UseRef</option>
-      </select>
-    </div>
-  );
-}
+import AppHeader from "./components/AppHeader.tsx";
 
 export default function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header /> {/* Now, Header is inside BrowserRouter */}
+        <AppHeader />
         <Routes>
           <Route path="/">
             {/* UseState Route */}

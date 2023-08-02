@@ -12,15 +12,7 @@ body {
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  border-bottom: 3px solid #ffffff;
+  height: 50px;
 }
 
 .App-intro {
@@ -31,3 +23,26 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  border-bottom: 3px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.header-selector {
+  margin-top: 1em; /* adjust as necessary */
+}
+
+
