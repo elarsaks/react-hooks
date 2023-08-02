@@ -41,7 +41,10 @@ export default () => {
   // State to manage the theme
   const [dark, setDark] = useState(false);
 
-  // Using cache number values to avoid calling the slow function on every render
+  // At first value is returned from the slow function and then it is stored in memory.
+  // When the number changes, the slow function is called again and the value is updated in memory.
+  // This way, the slow function is not called on every render.
+  // Value is returned from memory when the theme changes.
   const doubleNumber = useMemo(() => {
     return slowFunction(number);
   }, [number]);
