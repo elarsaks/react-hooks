@@ -3,6 +3,7 @@ import React, { useState, useMemo } from "react";
 export default () => {
   const infoStyle = {
     color: "#61DAFB",
+    margin: "20px",
   };
 
   const buttonStyle = {
@@ -49,26 +50,23 @@ export default () => {
   //  const doubleNumber = slowFunction(number);
 
   // Memoized styles to change the theme dynamically
-  const themeStyles = useMemo(
-    () => ({
-      backgroundColor: dark ? "#282c34" : "#fff",
-      color: dark ? "#fff" : "#282c34",
-      padding: "10px 20px",
-      fontSize: "24px",
-      fontWeight: "bold",
-      borderRadius: "5px",
-      border: "2px solid #61DAFB",
-      margin: "20px",
-    }),
-    [dark]
-  );
+  const themeStyles = {
+    backgroundColor: dark ? "#282c34" : "#fff",
+    color: dark ? "#fff" : "#282c34",
+    padding: "10px 20px",
+    fontSize: "24px",
+    fontWeight: "bold",
+    borderRadius: "5px",
+    border: "2px solid #61DAFB",
+    margin: "20px",
+  };
 
   return (
     <>
       <h2 style={infoStyle}>
         When updating the theme, the background colors change quickly because
-        the number value is taken from cache. However, when changing the number,
-        the component takes a bit of time to re-render.
+        the number value is taken from memory. However, when changing the
+        number, the component takes a bit of time to re-render.
       </h2>
       {/* Input field to change the number */}
       <input
