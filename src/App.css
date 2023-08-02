@@ -16,12 +16,11 @@ body {
  
 }
 
-
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
 .App-header {
   background-color: #222;
   height: 150px;
@@ -32,19 +31,20 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1em;
+  flex-wrap: wrap;
 }
 
 
-.header-selector {
 
-  color: #282C34; /* Text color */
-  background-color: #61DAFB; /* Background color */
-  border: none; /* Removes default select border */
-  padding: 10px; /* Adds some space around the text */
-  border-radius: 5px; /* Rounds the corners */
-  font-size: 1.2em; /* Makes the text a bit larger */
-  outline: none; /* Removes focus outline */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Adds a bit of shadow */
+.header-selector {
+  color: #282C34;
+  background-color: #61DAFB;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 
