@@ -42,7 +42,16 @@ body {
 }
 
 .header-selector {
-  margin-top: 1em; /* adjust as necessary */
+  margin-top: 1em;
+  color: #282C34; /* Text color */
+  background-color: #61DAFB; /* Background color */
+  border: none; /* Removes default select border */
+  padding: 10px; /* Adds some space around the text */
+  border-radius: 5px; /* Rounds the corners */
+  font-size: 1.2em; /* Makes the text a bit larger */
+  outline: none; /* Removes focus outline */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Adds a bit of shadow */
 }
+
 
 
