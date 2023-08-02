@@ -35,20 +35,20 @@ body {
 }
 
 .header-selector {
-  color: #282C34;
-  background-color: #61DAFB;
-  border: none;
-  padding: 10px;
+  margin: 20px;
+  color: white;
+  background-color: #282c34;
   border-radius: 5px;
-  font-size: 1.2em;
-  outline: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid #61DAFB;
   cursor: pointer;
 }
 
-
 .button-style {
-  margin: 20px;
+  margin: 5px;
+  margin-top: 20px;
   color: white;
   background-color: #282c34;
   border-radius: 5px;
@@ -58,8 +58,10 @@ body {
   border: 2px solid #61DAFB;
 }
 
+
 .active-button-style {
-  margin: 20px;
+  margin: 5px;
+  margin-top: 20px;
   color: white;
   background-color: #282c34;
   border-radius: 5px;
@@ -69,5 +71,19 @@ body {
   border: 2px solid #FBDA61;
 }
 
+.info-style {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #FFFFFF;
+  margin: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.info-style span {
+  font-weight: bold;
+  color: #61DAFB;
+}
 

@@ -21,6 +21,13 @@ export default () => {
 
   return (
     <>
+      <h2 className="info-style">
+        <span>"useEffect"</span> is a React hook that allows you to perform side
+        effects in
+        <span> functional components</span>, such as fetching data, subscribing
+        to events, or manually changing the <span> DOM</span>, after every
+        render or when specific dependencies change.
+      </h2>
       <div>
         <button
           onClick={() => setResourceType("posts")}

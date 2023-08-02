@@ -1,11 +1,6 @@
 import React, { useState, useMemo } from "react";
 
 export default () => {
-  const infoStyle = {
-    color: "#FBDA61",
-    margin: "20px",
-  };
-
   const inputStyle = {
     margin: "20px",
     border: "2px solid #61DAFB",
@@ -55,10 +50,15 @@ export default () => {
 
   return (
     <>
-      <h2 style={infoStyle}>
+      <h2 className="info-style">
+        <span>useMemo</span> is a React hook that memorizes the result of a
+        function and returns the cached result when the function is called with
+        the same inputs, optimizing performance by avoiding unnecessary
+        re-computations.
+        <br></br> <br></br>
         When updating the theme, the background colors change quickly because
-        the number value is taken from memory. However, when changing the
-        number, the component takes a bit of time to re-render.
+        the number value is taken from <span> memory</span>. However, when
+        changing the number, the component takes a bit of time to re-render.
       </h2>
       {/* Input field to change the number */}
       <input
@@ -69,7 +69,7 @@ export default () => {
       />
       {/* Button to change the theme */}
       <button
-        class="button-style"
+        className="button-style"
         onClick={(e) => setDark((prevDark) => !prevDark)}
       >
         Change Theme

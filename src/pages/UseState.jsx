@@ -40,6 +40,12 @@ export default () => {
 
   return (
     <>
+      <h2 className="info-style">
+        <span>useState</span> is a crucial React hook for managing state in
+        <span> functional components</span>, enabling dynamic and interactive
+        user interfaces through simple initialization and updates.
+      </h2>
+
       <button style={buttonStyle} onClick={handleDecrement}>
         -
       </button>
