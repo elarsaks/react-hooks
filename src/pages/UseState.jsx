@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const DummyComponent = () => {
   const buttonStyle = {
@@ -17,16 +17,28 @@ const DummyComponent = () => {
     fontWeight: 'bold',
     color: 'white',  
     borderRadius: '5px',
-
     border: '2px solid #61DAFB',  
     padding: '10px 20px',  
   };
 
+  // Add state for the number
+  const [count, setCount] = useState(0);
+
+  // Function to handle the increment button click
+  const handleIncrement = () => {
+    setCount(count + 1);
+  };
+
+  // Function to handle the decrement button click
+  const handleDecrement = () => {
+    setCount(count - 1);
+  };
+
   return (
     <>
-      <button style={buttonStyle}>-</button>
-      <span style={spanStyle}>0</span>
-      <button style={buttonStyle}>+</button>
+      <button style={buttonStyle} onClick={handleDecrement}>-</button>
+      <span style={spanStyle}>{count}</span>
+      <button style={buttonStyle} onClick={handleIncrement}>+</button>
     </>
   );
 };
