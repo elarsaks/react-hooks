@@ -1,22 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 export default () => {
-  const buttonStyle = {
-    margin: "20px",
-    border: "2px solid #61DAFB",
-    color: "white",
-    backgroundColor: "#282c34",
-    borderRadius: "5px",
-    padding: "10px 20px",
-    fontSize: "18px",
-    cursor: "pointer",
-  };
-
-  const activeButtonStyle = {
-    ...buttonStyle,
-    border: "2px solid #FBDA61", // Change the border color to orange for the active button
-  };
-
   const [resourceType, setResourceType] = useState("posts");
   const [items, setItems] = useState([]);
 
@@ -40,21 +24,27 @@ export default () => {
       <div>
         <button
           onClick={() => setResourceType("posts")}
-          style={resourceType === "posts" ? activeButtonStyle : buttonStyle}
+          className={
+            resourceType === "posts" ? "active-button-style" : "button-style"
+          }
         >
           Posts
         </button>
 
         <button
           onClick={() => setResourceType("users")}
-          style={resourceType === "users" ? activeButtonStyle : buttonStyle}
+          className={
+            resourceType === "users" ? "active-button-style" : "button-style"
+          }
         >
           Users
         </button>
 
         <button
           onClick={() => setResourceType("comments")}
-          style={resourceType === "comments" ? activeButtonStyle : buttonStyle}
+          className={
+            resourceType === "comments" ? "active-button-style" : "button-style"
+          }
         >
           Comments
         </button>

@@ -6,17 +6,6 @@ export default () => {
     margin: "20px",
   };
 
-  const buttonStyle = {
-    margin: "20px",
-    border: "2px solid #61DAFB",
-    color: "white",
-    backgroundColor: "#282c34",
-    borderRadius: "5px",
-    padding: "10px 20px",
-    fontSize: "18px",
-    cursor: "pointer",
-  };
-
   const inputStyle = {
     margin: "20px",
     border: "2px solid #61DAFB",
@@ -80,7 +69,7 @@ export default () => {
       />
       {/* Button to change the theme */}
       <button
-        style={buttonStyle}
+        class="button-style"
         onClick={(e) => setDark((prevDark) => !prevDark)}
       >
         Change Theme
