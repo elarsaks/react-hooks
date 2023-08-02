@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default () => {
   const buttonStyle = {
@@ -11,6 +10,11 @@ export default () => {
     padding: "10px 20px",
     fontSize: "18px",
     cursor: "pointer",
+  };
+
+  const activeButtonStyle = {
+    ...buttonStyle,
+    border: "2px solid orange", // Change the border color to orange for the active button
   };
 
   const [resourceType, setResourceType] = useState("posts");
@@ -34,24 +38,33 @@ export default () => {
   return (
     <>
       <div>
-        <button onClick={() => setResourceType("posts")} style={buttonStyle}>
+        <button
+          onClick={() => setResourceType("posts")}
+          style={resourceType === "posts" ? activeButtonStyle : buttonStyle}
+        >
           Posts
         </button>
 
-        <button onClick={() => setResourceType("users")} style={buttonStyle}>
+        <button
+          onClick={() => setResourceType("users")}
+          style={resourceType === "users" ? activeButtonStyle : buttonStyle}
+        >
           Users
         </button>
 
-        <button onClick={() => setResourceType("comments")} style={buttonStyle}>
+        <button
+          onClick={() => setResourceType("comments")}
+          style={resourceType === "comments" ? activeButtonStyle : buttonStyle}
+        >
           Comments
         </button>
       </div>
-      <h1>{resourceType}</h1>
+
       {items.map((item) => {
         if (resourceType === "posts") {
-          return <pre key={item.id}>{JSON.stringify(item.title)}</pre>;
+          return <p key={item.id}>{JSON.stringify(item.title)}</p>;
         } else {
-          return <pre key={item.id}>{JSON.stringify(item.name)}</pre>;
+          return <p key={item.id}>{JSON.stringify(item.name)}</p>;
         }
       })}
     </>
