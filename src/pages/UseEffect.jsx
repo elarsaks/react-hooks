@@ -14,7 +14,7 @@ export default () => {
 
   const activeButtonStyle = {
     ...buttonStyle,
-    border: "2px solid orange", // Change the border color to orange for the active button
+    border: "2px solid #FBDA61", // Change the border color to orange for the active button
   };
 
   const [resourceType, setResourceType] = useState("posts");

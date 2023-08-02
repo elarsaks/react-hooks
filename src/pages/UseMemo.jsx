@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 
 export default () => {
   const infoStyle = {
-    color: "#61DAFB",
+    color: "#FBDA61",
     margin: "20px",
   };
 
