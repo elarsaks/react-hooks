@@ -34,8 +34,6 @@ body {
   flex-wrap: wrap;
 }
 
-
-
 .header-selector {
   color: #282C34;
   background-color: #61DAFB;
@@ -45,6 +43,7 @@ body {
   font-size: 1.2em;
   outline: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 
