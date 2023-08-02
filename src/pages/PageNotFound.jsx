@@ -14,7 +14,7 @@ const NotFound = () => {
     fontSize: "48px",
     fontWeight: "bold",
     marginBottom: "20px",
-    color: "#FFFFFF",
+    color: "#db0007",
   };
 
   const paragraphStyle = {

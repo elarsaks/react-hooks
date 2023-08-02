@@ -26,13 +26,15 @@ export default function AppHeader() {
         onChange={handleRouteChange}
         value={selectedOption}
       >
-        <option value="/useState">UseState</option>
-        <option value="/useCallback">UseCallback</option>
-        <option value="/useContext">UseContext</option>
+        <option value="/useCallback">* UseCallback </option>
+        <option value="/useContext">* UseContext</option>
+        <option value="/useCustom">* UseCustom</option>
         <option value="/useEffect">UseEffect</option>
         <option value="/useMemo">UseMemo</option>
-        <option value="/useReducer">UseReducer</option>
-        <option value="/useRef">UseRef</option>
+        <option value="/useReducer">* UseReducer</option>
+        <option value="/useRef">* UseRef</option>
+        <option value="/useState">UseState</option>
+        <option value="/useLayout">* UseLayout</option>
       </select>
     </div>
   );

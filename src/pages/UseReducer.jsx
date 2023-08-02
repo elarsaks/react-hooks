@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const DummyComponent = () => {
+export default () => {
   return (
     <div>
-      <h1>Hello, I am a Dummy Component!</h1>
-      <p>This is just a placeholder component to demonstrate usage.</p>
+      <h1>🚧 UNDER DEVELOPMENT 🚧</h1>
     </div>
   );
 };
-
-export default DummyComponent;
