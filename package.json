@@ -2,7 +2,7 @@
   "name": "react-hooks",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://elarsaks.github.io/react-hooks",
+  "homepage": "https://elarsaks.github.io/react-hooks/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
