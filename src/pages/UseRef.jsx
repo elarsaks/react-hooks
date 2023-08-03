@@ -5,8 +5,10 @@ import util from "../styles/Util.module.css";
 export default () => {
   const [name, setName] = useState(() => "");
   const renderCount = useRef(0);
+  const prevName = useRef("");
 
   useEffect(() => {
+    prevName.current = name;
     renderCount.current = renderCount.current + 1;
   });
 
@@ -23,11 +25,17 @@ export default () => {
       <input
         type="text"
         value={name}
+        placeholder="Enter your name"
         className={util["input"]}
         onChange={(e) => setName(e.target.value)}
       />
       <h2 className={`${info["info"]} `}>
-        My name is <span> {name ? name : "...."} </span> <br></br>
+        My name is <span> {name ? name : "_"} </span> <br></br>
+        It used to be <span>
+          {" "}
+          {prevName.current ? prevName.current : "_"}{" "}
+        </span>{" "}
+        <br></br> <br></br>
         Componenty was rendered <span> {renderCount.current} </span> times.
       </h2>
 
