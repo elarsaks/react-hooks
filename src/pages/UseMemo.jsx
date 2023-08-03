@@ -1,4 +1,6 @@
 import React, { useState, useMemo } from "react";
+import info from "../styles/Info.module.css";
+import util from "../styles/Util.module.css";
 
 export default () => {
   const inputStyle = {
@@ -53,8 +55,8 @@ export default () => {
 
   return (
     <>
-      <h1>useMemo</h1>
-      <h2 className="info-style border-bottom">
+      <h1 className={util["header-1"]}>- useMemo -</h1>
+      <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
         <span>useMemo</span> is a React hook that memorizes the result of a
         function and returns the cached result when the function is called with
         the same inputs, optimizing performance by avoiding unnecessary
@@ -69,7 +71,7 @@ export default () => {
       />
       {/* Button to change the theme */}
       <button
-        className="button-style"
+        className={util["button"]}
         onClick={(e) => setDark((prevDark) => !prevDark)}
       >
         Change Theme
@@ -77,7 +79,7 @@ export default () => {
       {/* Display the doubled number with the dynamically applied theme */}
       <div style={themeStyles}>Double the input: {doubleNumber}</div>
 
-      <h2 className="info-style border-top">
+      <h2 className={`${info["info"]} ${info["border-top"]}`}>
         When updating the theme, the background colors change quickly because
         the number value is taken from <span> memory</span>. However, when
         changing the number, the component takes a bit of time to re-render.

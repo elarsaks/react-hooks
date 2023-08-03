@@ -1,0 +1,30 @@
+.header-1 {
+    color: #fbda61;
+    font-weight: bold;
+    letter-spacing: 0.1em;  
+}
+
+.button {
+    margin: 5px;
+    margin-top: 20px;
+    color: white;
+    background-color: #282c34;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #61dafb;
+  }
+  
+  .active-button{
+    margin: 5px;
+    margin-top: 20px;
+    color: white;
+    background-color: #282c34;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 2px solid #fbda61;
+  }
+  
