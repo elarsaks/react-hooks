@@ -20,20 +20,22 @@ export default () => {
         <span>lifetime of the component</span>, allowing you to keep any mutable
         value around similar to instance fields in classes.
       </h2>
-
       <input
         type="text"
         value={name}
         className={util["input"]}
         onChange={(e) => setName(e.target.value)}
       />
-
-      <h2 className={`${info["info"]} ${info["border-top"]}`}>
-        My name is <span> {name ? name : "...."} </span>
+      <h2 className={`${info["info"]} `}>
+        My name is <span> {name ? name : "...."} </span> <br></br>
+        Componenty was rendered <span> {renderCount.current} </span> times.
       </h2>
 
-      <h2 className={`${info["info"]} `}>
-        I rendered <span> {renderCount.current} </span> times.
+      <h2 className={`${info["info"]} ${info["border-top"]}`}>
+        Everytime user <span> inputs </span> a character, the{" "}
+        <span>component </span> is re-rendered. <br></br>
+        <span>useRef</span> is good for persisting values, whitout causing
+        <span> re-renders</span>.
       </h2>
     </>
   );
