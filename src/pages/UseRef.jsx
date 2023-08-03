@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
 
 export default () => {
   const [name, setName] = useState(() => "");
+  const renderCount = useRef(0);
+
+  useEffect(() => {
+    renderCount.current = renderCount.current + 1;
+  });
 
   return (
     <>
@@ -25,6 +30,10 @@ export default () => {
 
       <h2 className={`${info["info"]} ${info["border-top"]}`}>
         My name is <span> {name ? name : "...."} </span>
+      </h2>
+
+      <h2 className={`${info["info"]} `}>
+        I rendered <span> {renderCount.current} </span> times.
       </h2>
     </>
   );
