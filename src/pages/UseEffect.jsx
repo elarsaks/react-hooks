@@ -24,7 +24,7 @@ export default () => {
 
   return (
     <>
-      <h1>useEffect</h1>
+      <h1 className={util["header-1"]}>- useEffect -</h1>
       <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
         <span>"useEffect"</span> is a React hook that allows you to perform side
         effects in

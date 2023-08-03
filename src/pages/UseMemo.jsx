@@ -55,7 +55,7 @@ export default () => {
 
   return (
     <>
-      <h1>useMemo</h1>
+      <h1 className={util["header-1"]}>- useMemo -</h1>
       <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
         <span>useMemo</span> is a React hook that memorizes the result of a
         function and returns the cached result when the function is called with

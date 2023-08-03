@@ -20,11 +20,13 @@
   }
   
   .border-top {
+    margin-top: 30px;
     padding-top: 20px;
     border-top: 5px solid #61dafb;
   }
   
   .border-bottom {
+
     padding-bottom: 20px;
     border-bottom: 5px solid #61dafb;
   }

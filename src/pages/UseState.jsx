@@ -42,7 +42,7 @@ export default () => {
 
   return (
     <>
-      <h1>useState</h1>
+      <h1 className={util["header-1"]}>- useState -</h1>
       <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
         <span>useState</span> is a crucial React hook for managing state in
         <span> functional components</span>, enabling dynamic and interactive

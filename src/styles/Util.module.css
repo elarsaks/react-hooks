@@ -1,3 +1,9 @@
+.header-1 {
+    color: #fbda61;
+    font-weight: bold;
+    letter-spacing: 0.1em;  
+}
+
 .button {
     margin: 5px;
     margin-top: 20px;
