@@ -2,9 +2,12 @@
 
 # React Hooks
 
-### 🚧 UNDER DEVELOPMENT 🚧 (5/9 hooks)
+
 
 This is a straightforward React application demonstrating the usage of 9 essential React Hooks.
+
+
+### 🚧 UNDER DEVELOPMENT 🚧 (5/9 hooks)
 
 ## Introduction
 
