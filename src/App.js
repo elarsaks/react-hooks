@@ -9,7 +9,7 @@ import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
 import PageNotFound from "./pages/PageNotFound";
 import UseState from "./pages/UseState";
-import AppHeader from "./components/AppHeader.tsx";
+import AppHeader from "./components/AppHeader";
 
 export default function App() {
   return (

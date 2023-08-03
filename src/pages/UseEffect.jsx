@@ -21,7 +21,8 @@ export default () => {
 
   return (
     <>
-      <h2 className="info-style">
+      <h1>useEffect</h1>
+      <h2 className="info-style border-bottom">
         <span>"useEffect"</span> is a React hook that allows you to perform side
         effects in
         <span> functional components</span>, such as fetching data, subscribing

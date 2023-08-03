@@ -13,37 +13,112 @@ body {
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 50px;
- 
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  border-bottom: 3px solid #ffffff;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1em;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #282c34;
+  color: #fff;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-content h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.App-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 .header-selector {
-  margin: 20px;
-  color: white;
-  background-color: #282c34;
+  background-color: #61dafb;
+  color: #282c34;
+  border: none;
+  padding: 10px;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 18px;
+  font-size: 1.2em;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  border: 2px solid #61DAFB;
-  cursor: pointer;
+}
+
+/* Media query for mobile responsiveness */
+@media screen and (max-width: 600px) {
+  .logo-title {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-content h1  {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 20px;
+  color: #61dafb;
+}
+
+.info-style {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-bottom: 10px;
+}
+
+.border-top {
+  padding-top: 20px;
+  border-top: 5px solid #61dafb;
+}
+
+.border-bottom {
+  padding-bottom: 20px;
+  border-bottom: 5px solid #61dafb;
+}
+
+.info-style span {
+  font-weight: bold;
+  color: #61dafb;
+}
+
+@media screen and (max-width: 600px) {
+  .info-style {
+    font-size: 18px;
+    margin: 10px;
+  }
 }
 
 .button-style {
@@ -55,9 +130,8 @@ body {
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  border: 2px solid #61DAFB;
+  border: 2px solid #61dafb;
 }
-
 
 .active-button-style {
   margin: 5px;
@@ -68,22 +142,5 @@ body {
   padding: 10px 20px;
   font-size: 18px;
   cursor: pointer;
-  border: 2px solid #FBDA61;
+  border: 2px solid #fbda61;
 }
-
-.info-style {
-  font-size: 24px;
-  font-weight: normal;
-  line-height: 1.5;
-  color: #FFFFFF;
-  margin: 20px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.info-style span {
-  font-weight: bold;
-  color: #61DAFB;
-}
-

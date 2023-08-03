@@ -45,20 +45,20 @@ export default () => {
     fontWeight: "bold",
     borderRadius: "5px",
     border: "2px solid #61DAFB",
-    margin: "20px",
+    marginTop: "20px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    maxWidth: "800px",
   };
 
   return (
     <>
-      <h2 className="info-style">
+      <h1>useMemo</h1>
+      <h2 className="info-style border-bottom">
         <span>useMemo</span> is a React hook that memorizes the result of a
         function and returns the cached result when the function is called with
         the same inputs, optimizing performance by avoiding unnecessary
         re-computations.
-        <br></br> <br></br>
-        When updating the theme, the background colors change quickly because
-        the number value is taken from <span> memory</span>. However, when
-        changing the number, the component takes a bit of time to re-render.
       </h2>
       {/* Input field to change the number */}
       <input
@@ -76,6 +76,12 @@ export default () => {
       </button>
       {/* Display the doubled number with the dynamically applied theme */}
       <div style={themeStyles}>Double the input: {doubleNumber}</div>
+
+      <h2 className="info-style border-top">
+        When updating the theme, the background colors change quickly because
+        the number value is taken from <span> memory</span>. However, when
+        changing the number, the component takes a bit of time to re-render.
+      </h2>
     </>
   );
 };
