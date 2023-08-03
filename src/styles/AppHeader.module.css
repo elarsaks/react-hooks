@@ -18,7 +18,7 @@
     align-items: center;
   }
   
-  .header-content h1 {
+  .header-content  {
     font-size: 24px;
     margin: 0;
   }
@@ -35,3 +35,13 @@
     cursor: pointer;
   }
   
+
+  @media screen and (max-width: 600px) {
+    .logo-title {
+      align-items: center;
+    }
+  
+    .header-content  {
+      font-size: 18px;
+    }
+  }
