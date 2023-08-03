@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../logo.svg";
-import styles from "./AppHeader.module.css";
+import header from "../styles/AppHeader.module.css";
+import app from "../styles/App.module.css";
 
 export default function AppHeader() {
   const navigate = useNavigate();
@@ -18,14 +19,14 @@ export default function AppHeader() {
   }, [location]);
 
   return (
-    <div className={styles["App-header"]}>
-      <div className={styles["logo-title"]}>
-        <img src={logo} className={styles["App-logo"]} alt="logo" />
-        <h1 className={styles["header-content"]}>React Hooks</h1>
+    <div className={header["App-header"]}>
+      <div className={header["logo-title"]}>
+        <img src={logo} className={app["App-logo"]} alt="logo" />
+        <h1 className={header["header-content"]}>React Hooks</h1>
       </div>
 
       <select
-        className={styles["header-selector"]}
+        className={header["header-selector"]}
         onChange={handleRouteChange}
         value={selectedOption}
       >

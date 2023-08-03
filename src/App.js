@@ -1,4 +1,4 @@
-import "./App.css";
+import app from "./styles/App.module.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import UseCallback from "./pages/UseCallback";
@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <BrowserRouter basename={baseUrl}>
-      <div className="App">
+      <div className={app["App"]}>
         <AppHeader />
         <Routes>
           <Route>

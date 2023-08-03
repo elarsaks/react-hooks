@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/Info.module.css";
 import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
 
