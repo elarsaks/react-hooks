@@ -18,9 +18,12 @@ export default function AppHeader() {
 
   return (
     <div className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1>React Hooks</h1>
-
+      <div className="header-content">
+        <div className="logo-title">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>React Hooks</h1>
+        </div>
+      </div>
       <select
         className="header-selector"
         onChange={handleRouteChange}

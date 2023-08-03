@@ -6,7 +6,7 @@ const NotFound = () => {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-
+    marginTop: "100px",
     color: "#333",
   };
 
@@ -14,7 +14,7 @@ const NotFound = () => {
     fontSize: "48px",
     fontWeight: "bold",
     marginBottom: "20px",
-    color: "#db0007",
+    color: "#e74c3c",
   };
 
   const paragraphStyle = {
