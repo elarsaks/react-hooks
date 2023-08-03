@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import info from "../styles/Info.module.css";
+import util from "../styles/Util.module.css";
 
 export default () => {
   const buttonStyle = {
@@ -41,17 +43,17 @@ export default () => {
   return (
     <>
       <h1>useState</h1>
-      <h2 className="info-style border-bottom">
+      <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
         <span>useState</span> is a crucial React hook for managing state in
         <span> functional components</span>, enabling dynamic and interactive
         user interfaces through simple initialization and updates.
       </h2>
 
-      <button style={buttonStyle} onClick={handleDecrement}>
+      <button className={util["button"]} onClick={handleDecrement}>
         -
       </button>
       <span style={spanStyle}>{count}</span>
-      <button style={buttonStyle} onClick={handleIncrement}>
+      <button className={util["button"]} onClick={handleIncrement}>
         +
       </button>
     </>

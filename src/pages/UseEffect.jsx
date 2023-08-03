@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import styles from "../styles/Info.module.css";
+import info from "../styles/Info.module.css";
+import util from "../styles/Util.module.css";
 
 export default () => {
   const [resourceType, setResourceType] = useState("posts");
@@ -22,7 +25,7 @@ export default () => {
   return (
     <>
       <h1>useEffect</h1>
-      <h2 className="info-style border-bottom">
+      <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
         <span>"useEffect"</span> is a React hook that allows you to perform side
         effects in
         <span> functional components</span>, such as fetching data, subscribing
@@ -33,7 +36,7 @@ export default () => {
         <button
           onClick={() => setResourceType("posts")}
           className={
-            resourceType === "posts" ? "active-button-style" : "button-style"
+            resourceType === "posts" ? util["active-button"] : util["button"]
           }
         >
           Posts
@@ -42,7 +45,7 @@ export default () => {
         <button
           onClick={() => setResourceType("users")}
           className={
-            resourceType === "users" ? "active-button-style" : "button-style"
+            resourceType === "users" ? util["active-button"] : util["button"]
           }
         >
           Users
@@ -51,7 +54,7 @@ export default () => {
         <button
           onClick={() => setResourceType("comments")}
           className={
-            resourceType === "comments" ? "active-button-style" : "button-style"
+            resourceType === "comments" ? util["active-button"] : util["button"]
           }
         >
           Comments
