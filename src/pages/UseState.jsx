@@ -3,17 +3,6 @@ import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
 
 export default () => {
-  const buttonStyle = {
-    margin: "20px",
-    border: "2px solid #61DAFB",
-    color: "white",
-    backgroundColor: "#282c34",
-    borderRadius: "5px",
-    padding: "10px 20px",
-    fontSize: "18px",
-    cursor: "pointer",
-  };
-
   const spanStyle = {
     margin: "20px",
     fontSize: "24px",

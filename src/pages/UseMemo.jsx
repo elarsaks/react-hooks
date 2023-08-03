@@ -3,17 +3,6 @@ import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
 
 export default () => {
-  const inputStyle = {
-    margin: "20px",
-    border: "2px solid #61DAFB",
-    color: "#282c34",
-    backgroundColor: "#fff",
-    borderRadius: "5px",
-    padding: "10px 20px",
-    fontSize: "18px",
-    cursor: "pointer",
-  };
-
   // Function that simulates a slow operation (for demonstration purposes)
   function slowFunction(num) {
     console.log("Calling Slow Function");
@@ -69,7 +58,7 @@ export default () => {
       <input
         type="number"
         value={number}
-        style={inputStyle}
+        className={util["input"]}
         onChange={(e) => setNumber(parseInt(e.target.value))}
       />
       {/* Button to change the theme */}
