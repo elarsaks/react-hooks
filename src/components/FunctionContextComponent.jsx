@@ -18,11 +18,5 @@ export default () => {
     maxWidth: "800px",
   };
 
-  return (
-    <ThemeContext.Consumer>
-      {(darkTheme) => {
-        return <div style={themeStyles}>Function Theme</div>;
-      }}
-    </ThemeContext.Consumer>
-  );
+  return <div style={themeStyles}>Function Theme</div>;
 };
