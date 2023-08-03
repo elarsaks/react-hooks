@@ -2,10 +2,19 @@
 .App-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: #282c34;
     color: #fff;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 900px;
   }
   
   .logo-title {
@@ -13,12 +22,7 @@
     align-items: center;
   }
   
-  .header-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header-content  {
+  .header-title  {
     font-size: 24px;
     margin: 0;
   }

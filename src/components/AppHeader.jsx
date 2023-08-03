@@ -20,26 +20,28 @@ export default function AppHeader() {
 
   return (
     <div className={header["App-header"]}>
-      <div className={header["logo-title"]}>
-        <img src={logo} className={app["App-logo"]} alt="logo" />
-        <h1 className={header["header-content"]}>React Hooks</h1>
-      </div>
+      <div className={header["header-content"]}>
+        <div className={header["logo-title"]}>
+          <img src={logo} className={app["App-logo"]} alt="logo" />
+          <h1 className={header["header-title"]}>React Hooks</h1>
+        </div>
 
-      <select
-        className={header["header-selector"]}
-        onChange={handleRouteChange}
-        value={selectedOption}
-      >
-        <option value="/useCallback">* UseCallback </option>
-        <option value="/useContext">* UseContext</option>
-        <option value="/useCustom">* UseCustom</option>
-        <option value="/useEffect">UseEffect</option>
-        <option value="/useMemo">UseMemo</option>
-        <option value="/useReducer">* UseReducer</option>
-        <option value="/useRef">* UseRef</option>
-        <option value="/useState">UseState</option>
-        <option value="/useLayout">* UseLayout</option>
-      </select>
+        <select
+          className={header["header-selector"]}
+          onChange={handleRouteChange}
+          value={selectedOption}
+        >
+          <option value="/useCallback">* useCallback </option>
+          <option value="/useContext">* useContext</option>
+          <option value="/useCustom">* useCustom</option>
+          <option value="/useEffect">useEffect</option>
+          <option value="/useMemo">useMemo</option>
+          <option value="/useReducer">* useReducer</option>
+          <option value="/useRef">* useRef</option>
+          <option value="/useState">useState</option>
+          <option value="/useLayout">* useLayout</option>
+        </select>
+      </div>
     </div>
   );
 }

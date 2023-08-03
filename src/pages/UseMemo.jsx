@@ -17,7 +17,7 @@ export default () => {
   // Function that simulates a slow operation (for demonstration purposes)
   function slowFunction(num) {
     console.log("Calling Slow Function");
-    for (let i = 0; i <= 2000000000; i++) {}
+    for (let i = 0; i <= 1000000000; i++) {}
     return num * 2;
   }
 
@@ -39,19 +39,22 @@ export default () => {
   //  const doubleNumber = slowFunction(number);
 
   // Memoized styles to change the theme dynamically
-  const themeStyles = {
-    backgroundColor: dark ? "#282c34" : "#fff",
-    color: dark ? "#fff" : "#282c34",
-    padding: "10px 20px",
-    fontSize: "24px",
-    fontWeight: "bold",
-    borderRadius: "5px",
-    border: "2px solid #61DAFB",
-    marginTop: "20px",
-    marginLeft: "auto",
-    marginRight: "auto",
-    maxWidth: "800px",
-  };
+  const themeStyles = useMemo(
+    () => ({
+      backgroundColor: dark ? "#282c34" : "#fff",
+      color: dark ? "#fff" : "#282c34",
+      padding: "10px 20px",
+      fontSize: "24px",
+      fontWeight: "bold",
+      borderRadius: "5px",
+      border: "2px solid #61DAFB",
+      marginTop: "20px",
+      marginLeft: "auto",
+      marginRight: "auto",
+      maxWidth: "800px",
+    }),
+    [dark]
+  );
 
   return (
     <>
@@ -80,7 +83,7 @@ export default () => {
       <div style={themeStyles}>Double the input: {doubleNumber}</div>
 
       <h2 className={`${info["info"]} ${info["border-top"]}`}>
-        When updating the theme, the background colors change quickly because
+        When updating the theme, the background colors changes quickly because
         the number value is taken from <span> memory</span>. However, when
         changing the number, the component takes a bit of time to re-render.
       </h2>
