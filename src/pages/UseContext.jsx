@@ -28,7 +28,7 @@ export default () => {
       </h2>
       <ThemeContext.Provider value={darkTheme}>
         <button className={util["button"]} onClick={toggleTheme}>
-          Toggel Theme
+          Toggle Theme
         </button>
         <FunctionContextComponent />
         <ClassContextComponent />
