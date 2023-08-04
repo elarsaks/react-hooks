@@ -34,6 +34,13 @@ export default () => {
     return [number, number + 1, number + 2];
   }, [number]);
 
+  //* THIS IS DEBUG - Use this function if you want to see the difference between useCallback and not using it
+  //* All the the lis items will be re-rendered if you don't use useCallback
+  // Function that returns an array of numbers
+  // const getItems = () => {
+  //  return [number, number + 1, number + 2];
+  // };
+
   return (
     <>
       {/* Header and Explanation about useCallback */}
@@ -70,8 +77,13 @@ export default () => {
         <List getItems={getItems} />
       </div>
 
-      {/* Other information (if needed) */}
-      <h2 className={`${info["info"]} ${info["border-top"]}`}>....</h2>
+      {/* Use case specific info */}
+      <h2 className={`${info["info"]} ${info["border-top"]}`}>
+        When updating the theme background colors, we are using{" "}
+        <span> useCallback </span> hook to memoize the <span> getItems </span>{" "}
+        function. This helps in preventing the re-creation of the function and
+        the list items are not re-rendered.
+      </h2>
     </>
   );
 };
