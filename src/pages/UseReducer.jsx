@@ -5,6 +5,7 @@ import util from "../styles/Util.module.css";
 const ACTIONS = {
   ADD_TODO: "add-todo",
   TOGGLE_TODO: "toggle-todo",
+  DELETE_TODO: "delete-todo",
 };
 
 function reducer(state, action) {
@@ -18,6 +19,8 @@ function reducer(state, action) {
         }
         return todo;
       });
+    case ACTIONS.DELETE_TODO:
+      return state.filter((todo) => todo.id !== action.payload.id);
     default:
       return state;
   }
@@ -27,7 +30,7 @@ function newTodo(name) {
   return { id: Date.now(), name: name, complete: false };
 }
 
-export default () => {
+export default function TodoApp() {
   const [todos, dispatch] = useReducer(reducer, []);
   const [name, setName] = useState("");
 
@@ -44,24 +47,39 @@ export default () => {
         <span>useReducer </span> ...
       </h2>
 
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
-          value="name"
+          value={name}
           className={util["input"]}
           onChange={(e) => setName(e.target.value)}
         />
+        <button className={util["button"]} type="submit">
+          Add Todo
+        </button>
       </form>
 
       {todos.map((todo) => (
-        <div key={todo.id}>
-          <span>{todo.name}</span>
+        <div key={todo.id} className={todo.complete ? util["complete"] : ""}>
+          <h1>
+            <span>{todo.name}</span>
+          </h1>
           <button
+            className={util["button"]}
             onClick={() =>
               dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id } })
             }
           >
             Toggle
+          </button>
+          <button
+            className={util["button"]}
+            disabled={!name}
+            onClick={() =>
+              dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: todo.id } })
+            }
+          >
+            Delete
           </button>
         </div>
       ))}
@@ -69,4 +87,4 @@ export default () => {
       <h2 className={`${info["info"]} ${info["border-top"]}`}>....</h2>
     </>
   );
-};
+}
