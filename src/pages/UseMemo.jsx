@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
+import Button from "../components/Button";
 
 export default () => {
   // Function that simulates a slow operation (for demonstration purposes)
@@ -16,18 +17,10 @@ export default () => {
   // State to manage the theme
   const [dark, setDark] = useState(false);
 
-  // At first value is returned from the slow function and then it is stored in memory.
-  // When the number changes, the slow function is called again and the value is updated in memory.
-  // This way, the slow function is not called on every render.
-  // Value is returned from memory when the theme changes.
   const doubleNumber = useMemo(() => {
     return slowFunction(number);
   }, [number]);
 
-  // Using this line instead of the one above will cause the slow function to be called on every render
-  //  const doubleNumber = slowFunction(number);
-
-  // Memoized styles to change the theme dynamically
   const themeStyles = useMemo(
     () => ({
       backgroundColor: dark ? "#282c34" : "#fff",
@@ -45,6 +38,10 @@ export default () => {
     [dark]
   );
 
+  const handleClick = () => {
+    setDark((prevDark) => !prevDark);
+  };
+
   return (
     <>
       <h1 className={util["header-1"]}>- useMemo -</h1>
@@ -54,21 +51,13 @@ export default () => {
         the same inputs, optimizing performance by avoiding unnecessary
         re-computations.
       </h2>
-      {/* Input field to change the number */}
       <input
         type="number"
         value={number}
         className={util["input"]}
         onChange={(e) => setNumber(parseInt(e.target.value))}
       />
-      {/* Button to change the theme */}
-      <button
-        className={util["button"]}
-        onClick={(e) => setDark((prevDark) => !prevDark)}
-      >
-        Change Theme
-      </button>
-      {/* Display the doubled number with the dynamically applied theme */}
+      <Button active={dark} handleClick={handleClick} text="Change Theme" />
       <div style={themeStyles}>Double the input: {doubleNumber}</div>
 
       <h2 className={`${info["info"]} ${info["border-top"]}`}>

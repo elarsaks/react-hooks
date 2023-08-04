@@ -1,10 +1,10 @@
 import ClassContextComponent from "../components/ClassContextComponent";
 import FunctionContextComponent from "../components/FunctionContextComponent";
+import Button from "../components/Button";
 import info from "../styles/Info.module.css";
 import React, { useEffect, useState, useRef } from "react";
 import util from "../styles/Util.module.css";
 
-// Export a context object
 export const ThemeContext = React.createContext();
 
 export default () => {
@@ -29,9 +29,11 @@ export default () => {
       </h2>
 
       <ThemeContext.Provider value={darkTheme}>
-        <button className={util["active-button"]} onClick={toggleTheme}>
-          Toggle Theme
-        </button>
+        <Button
+          active={darkTheme}
+          handleClick={toggleTheme}
+          text="Toggle Theme"
+        />
         <FunctionContextComponent />
         <ClassContextComponent />
       </ThemeContext.Provider>

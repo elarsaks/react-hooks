@@ -1,6 +1,7 @@
 import React from "react";
 import util from "../styles/Util.module.css";
 import todoStyle from "../styles/Todo.module.css";
+import Button from "../components/Button";
 
 const ACTIONS = {
   TOGGLE_TODO: "toggle-todo",
@@ -17,23 +18,19 @@ export default function Todo({ todo, dispatch, name }) {
       </h2>
 
       <div className={todoStyle["todo-actions"]}>
-        <button
-          className={util["button"]}
-          onClick={() =>
+        <Button
+          text="Toggle"
+          handleClick={() =>
             dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id } })
           }
-        >
-          Toggle
-        </button>
+        />
 
-        <button
-          className={util["button"]}
-          onClick={() =>
+        <Button
+          text="Delete"
+          handleClick={() =>
             dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: todo.id } })
           }
-        >
-          Delete
-        </button>
+        />
       </div>
     </div>
   );

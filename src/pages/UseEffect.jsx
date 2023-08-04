@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
+import Button from "../components/Button";
 
 export default () => {
   const [resourceType, setResourceType] = useState("posts");
@@ -11,15 +12,10 @@ export default () => {
       .then((response) => response.json())
       .then((json) => setItems(json));
 
-    // useEffect can return a function that will be called when the component unmounts.
     return () => {
-      // This is a good place to clean up any subscriptions or timers.
-
       console.log("Resource type changed.");
     };
-
-    // The second argument of useEffect is an array of dependencies.
-  }, [resourceType]); // Only run the effect if resourceType changes.
+  }, [resourceType]);
 
   return (
     <>
@@ -32,32 +28,23 @@ export default () => {
         render or when specific dependencies change.
       </h2>
       <div>
-        <button
-          onClick={() => setResourceType("posts")}
-          className={
-            resourceType === "posts" ? util["active-button"] : util["button"]
-          }
-        >
-          Posts
-        </button>
+        <Button
+          active={resourceType === "posts"}
+          handleClick={() => setResourceType("posts")}
+          text="Posts"
+        />
 
-        <button
-          onClick={() => setResourceType("users")}
-          className={
-            resourceType === "users" ? util["active-button"] : util["button"]
-          }
-        >
-          Users
-        </button>
+        <Button
+          active={resourceType === "users"}
+          handleClick={() => setResourceType("users")}
+          text="Users"
+        />
 
-        <button
-          onClick={() => setResourceType("comments")}
-          className={
-            resourceType === "comments" ? util["active-button"] : util["button"]
-          }
-        >
-          Comments
-        </button>
+        <Button
+          active={resourceType === "comments"}
+          handleClick={() => setResourceType("comments")}
+          text="Comments"
+        />
       </div>
 
       {items.map((item) => {

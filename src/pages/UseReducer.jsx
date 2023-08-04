@@ -2,6 +2,7 @@ import info from "../styles/Info.module.css";
 import React, { useReducer, useState } from "react";
 import util from "../styles/Util.module.css";
 import Todo from "../components/Todo";
+import Button from "../components/Button";
 
 const ACTIONS = {
   ADD_TODO: "add-todo",
@@ -59,13 +60,12 @@ export default function TodoApp() {
           className={util["input"]}
           onChange={(e) => setName(e.target.value)}
         />
-        <button
-          className={name ? util["active-button"] : util["disabled-button"]}
-          type="submit"
+        <Button
+          text="Add Todo"
+          handleClick={handleSubmit}
           disabled={!name}
-        >
-          Add Todo
-        </button>
+          active={name ? true : false}
+        />
       </form>
 
       <br />
