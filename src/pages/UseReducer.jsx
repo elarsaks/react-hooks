@@ -1,6 +1,7 @@
 import info from "../styles/Info.module.css";
 import React, { useReducer, useState } from "react";
 import util from "../styles/Util.module.css";
+import Todo from "../components/Todo";
 
 const ACTIONS = {
   ADD_TODO: "add-todo",
@@ -54,34 +55,19 @@ export default function TodoApp() {
           className={util["input"]}
           onChange={(e) => setName(e.target.value)}
         />
-        <button className={util["button"]} type="submit">
+        <button
+          className={name ? util["active-button"] : util["disabled-button"]}
+          type="submit"
+          disabled={!name}
+        >
           Add Todo
         </button>
       </form>
 
+      <br />
+
       {todos.map((todo) => (
-        <div key={todo.id} className={todo.complete ? util["complete"] : ""}>
-          <h1>
-            <span>{todo.name}</span>
-          </h1>
-          <button
-            className={util["button"]}
-            onClick={() =>
-              dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id } })
-            }
-          >
-            Toggle
-          </button>
-          <button
-            className={util["button"]}
-            disabled={!name}
-            onClick={() =>
-              dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: todo.id } })
-            }
-          >
-            Delete
-          </button>
-        </div>
+        <Todo key={todo.id} todo={todo} dispatch={dispatch} name={name} />
       ))}
 
       <h2 className={`${info["info"]} ${info["border-top"]}`}>....</h2>
