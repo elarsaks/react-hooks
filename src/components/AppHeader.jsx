@@ -31,9 +31,7 @@ export default function AppHeader() {
           onChange={handleRouteChange}
           value={selectedOption}
         >
-          <option value="/useCallback" disabled>
-            useCallback
-          </option>
+          <option value="/useCallback">useCallback</option>
           <option value="/useContext">useContext</option>
           <option value="/useCustom" disabled>
             useCustom
