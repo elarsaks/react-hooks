@@ -1,28 +1,41 @@
 import info from "../styles/Info.module.css";
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import util from "../styles/Util.module.css";
 
 const ACTIONS = {
-  INCREMENT: "increment",
-  DECREMENT: "decrement",
+  ADD_TODO: "add-todo",
+  TOGGLE_TODO: "toggle-todo",
 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case ACTIONS.INCREMENT:
-      return { count: state.count + 1 };
-    case ACTIONS.DECREMENT:
-      return { count: state.count - 1 };
+    case ACTIONS.ADD_TODO:
+      return [...state, newTodo(action.payload.name)];
+    case ACTIONS.TOGGLE_TODO:
+      return state.map((todo) => {
+        if (todo.id === action.payload.id) {
+          return { ...todo, complete: !todo.complete };
+        }
+        return todo;
+      });
     default:
       return state;
   }
 }
 
-export default () => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
+function newTodo(name) {
+  return { id: Date.now(), name: name, complete: false };
+}
 
-  const handleIncrement = () => dispatch({ type: ACTIONS.INCREMENT });
-  const handleDecrement = () => dispatch({ type: ACTIONS.DECREMENT });
+export default () => {
+  const [todos, dispatch] = useReducer(reducer, []);
+  const [name, setName] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name } });
+    setName("");
+  }
 
   return (
     <>
@@ -31,13 +44,27 @@ export default () => {
         <span>useReducer </span> ...
       </h2>
 
-      <button className={util["button"]} onClick={handleDecrement}>
-        -
-      </button>
-      <span className={util["counter"]}>{state.count}</span>
-      <button className={util["button"]} onClick={handleIncrement}>
-        +
-      </button>
+      <form>
+        <input
+          type="text"
+          value="name"
+          className={util["input"]}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </form>
+
+      {todos.map((todo) => (
+        <div key={todo.id}>
+          <span>{todo.name}</span>
+          <button
+            onClick={() =>
+              dispatch({ type: ACTIONS.TOGGLE_TODO, payload: { id: todo.id } })
+            }
+          >
+            Toggle
+          </button>
+        </div>
+      ))}
 
       <h2 className={`${info["info"]} ${info["border-top"]}`}>....</h2>
     </>
