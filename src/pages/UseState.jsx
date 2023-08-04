@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
+import Button from "../components/Button";
 
 export default () => {
   // Pass state initial value as a function to useState,
@@ -28,13 +29,9 @@ export default () => {
         user interfaces through simple initialization and updates.
       </h2>
 
-      <button className={util["button"]} onClick={handleDecrement}>
-        -
-      </button>
+      <Button text="-" handleClick={handleDecrement} />
       <span className={util["counter"]}>{count}</span>
-      <button className={util["button"]} onClick={handleIncrement}>
-        +
-      </button>
+      <Button text="+" handleClick={handleIncrement} />
 
       <h2 className={`${info["info"]} ${info["border-top"]}`}>
         In this demonstration, we've leveraged the <span>useState</span> hook to
