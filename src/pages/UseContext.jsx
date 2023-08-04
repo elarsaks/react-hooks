@@ -1,8 +1,7 @@
 import ClassContextComponent from "../components/ClassContextComponent";
 import FunctionContextComponent from "../components/FunctionContextComponent";
 import Button from "../components/Button";
-import info from "../styles/Info.module.css";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import util from "../styles/Util.module.css";
 
 // Create a new context instance
