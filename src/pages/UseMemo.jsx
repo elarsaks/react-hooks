@@ -49,16 +49,27 @@ export default () => {
 
   return (
     <>
-      // Rendered JSX
       <h1 className={util["header-1"]}>- useMemo -</h1>
+      <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
+        <span>useMemo</span> is a React hook that memorizes the result of a
+        function and returns the cached result when the function is called with
+        the same inputs, optimizing performance by avoiding unnecessary
+        re-computations.
+      </h2>
       <input
         type="number"
         value={number}
         className={util["input"]}
-        onChange={(e) => setNumber(parseInt(e.target.value))} // Update 'number' state on input change
+        onChange={(e) => setNumber(parseInt(e.target.value))}
       />
       <Button active={dark} handleClick={handleClick} text="Change Theme" />
       <div style={themeStyles}>Double the input: {doubleNumber}</div>
+
+      <h2 className={`${info["info"]} ${info["border-top"]}`}>
+        When updating the theme, the background colors changes quickly because
+        the number value is taken from <span> memory</span>. However, when
+        changing the number, the component takes a bit of time to re-render.
+      </h2>
     </>
   );
 };
