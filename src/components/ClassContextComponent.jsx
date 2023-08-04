@@ -14,7 +14,7 @@ export default class ClassContextComponent extends Component {
       marginTop: "20px",
       marginLeft: "auto",
       marginRight: "auto",
-      maxWidth: "800px",
+      maxWidth: "750px",
     };
   }
 

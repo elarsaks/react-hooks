@@ -7,8 +7,8 @@ export default () => {
   // Function that simulates a slow operation (for demonstration purposes)
   function slowFunction(num) {
     console.log("Calling Slow Function");
-    for (let i = 0; i <= 1000000000; i++) {}
-    return num * 2;
+    for (let i = 0; i <= 1000000000; i++) {} // Loops to simulate delay
+    return num * 2; // Returns doubled number
   }
 
   // State to manage the input number
@@ -17,10 +17,14 @@ export default () => {
   // State to manage the theme
   const [dark, setDark] = useState(false);
 
+  // useMemo used here to cache the result of slowFunction call,
+  // as long as the 'number' dependency does not change.
   const doubleNumber = useMemo(() => {
     return slowFunction(number);
   }, [number]);
 
+  // useMemo used here to cache the styles object,
+  // as long as the 'dark' dependency does not change.
   const themeStyles = useMemo(
     () => ({
       backgroundColor: dark ? "#282c34" : "#fff",
@@ -38,6 +42,7 @@ export default () => {
     [dark]
   );
 
+  // Event handler to toggle 'dark' state on button click
   const handleClick = () => {
     setDark((prevDark) => !prevDark);
   };

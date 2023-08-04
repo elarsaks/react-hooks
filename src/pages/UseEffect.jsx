@@ -4,18 +4,23 @@ import util from "../styles/Util.module.css";
 import Button from "../components/Button";
 
 export default () => {
+  // State to store the resource type (default to 'posts')
   const [resourceType, setResourceType] = useState("posts");
+
+  // State to store the fetched items
   const [items, setItems] = useState([]);
 
+  // useEffect to fetch data whenever the 'resourceType' changes
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
-      .then((response) => response.json())
-      .then((json) => setItems(json));
+    fetch(`https://jsonplaceholder.typicode.com/${resourceType}`) // Fetch data from the API
+      .then((response) => response.json()) // Parse the response to JSON
+      .then((json) => setItems(json)); // Update 'items' state with the fetched data
 
+    // Cleanup function called when 'resourceType' changes or the component unmounts
     return () => {
       console.log("Resource type changed.");
     };
-  }, [resourceType]);
+  }, [resourceType]); // 'resourceType' is a dependency of this effect
 
   return (
     <>
