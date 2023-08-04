@@ -35,6 +35,13 @@ export default () => {
       <button className={util["button"]} onClick={handleIncrement}>
         +
       </button>
+
+      <h2 className={`${info["info"]} ${info["border-top"]}`}>
+        In this demonstration, we've leveraged the <span>useState</span> hook to
+        represent our state as a numerical count. This count can be dynamically
+        increased or decreased, offering a clear illustration of state
+        management in a <span>React functional component</span>.
+      </h2>
     </>
   );
 };
