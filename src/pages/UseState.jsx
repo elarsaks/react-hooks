@@ -3,16 +3,6 @@ import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
 
 export default () => {
-  const spanStyle = {
-    margin: "20px",
-    fontSize: "24px",
-    fontWeight: "bold",
-    color: "white",
-    borderRadius: "5px",
-    border: "2px solid #61DAFB",
-    padding: "10px 20px",
-  };
-
   // Pass state initial value as a function to useState,
   // so the function is only called on the initial render.
   const [count, setCount] = useState(() => 0);
@@ -41,7 +31,7 @@ export default () => {
       <button className={util["button"]} onClick={handleDecrement}>
         -
       </button>
-      <span style={spanStyle}>{count}</span>
+      <span className={util["counter"]}>{count}</span>
       <button className={util["button"]} onClick={handleIncrement}>
         +
       </button>
