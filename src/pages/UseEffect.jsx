@@ -24,33 +24,39 @@ export default () => {
 
   return (
     <>
-      // Rendered JSX
       <h1 className={util["header-1"]}>- useEffect -</h1>
+      <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
+        <span>"useEffect"</span> is a React hook that allows you to perform side
+        effects in
+        <span> functional components</span>, such as fetching data, subscribing
+        to events, or manually changing the <span> DOM</span>, after every
+        render or when specific dependencies change.
+      </h2>
       <div>
         <Button
           active={resourceType === "posts"}
-          handleClick={() => setResourceType("posts")} // Update 'resourceType' to 'posts' on button click
+          handleClick={() => setResourceType("posts")}
           text="Posts"
         />
 
         <Button
           active={resourceType === "users"}
-          handleClick={() => setResourceType("users")} // Update 'resourceType' to 'users' on button click
+          handleClick={() => setResourceType("users")}
           text="Users"
         />
 
         <Button
           active={resourceType === "comments"}
-          handleClick={() => setResourceType("comments")} // Update 'resourceType' to 'comments' on button click
+          handleClick={() => setResourceType("comments")}
           text="Comments"
         />
       </div>
-      // Render a paragraph for each fetched item
+
       {items.map((item) => {
         if (resourceType === "posts") {
-          return <p key={item.id}>{JSON.stringify(item.title)}</p>; // If the resource type is 'posts', render the item's title
+          return <p key={item.id}>{JSON.stringify(item.title)}</p>;
         } else {
-          return <p key={item.id}>{JSON.stringify(item.name)}</p>; // If the resource type is 'users' or 'comments', render the item's name
+          return <p key={item.id}>{JSON.stringify(item.name)}</p>;
         }
       })}
     </>
