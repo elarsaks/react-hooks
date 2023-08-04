@@ -45,7 +45,11 @@ export default function TodoApp() {
     <>
       <h1 className={util["header-1"]}>- useReducer -</h1>
       <h2 className={`${info["info"]} ${info["border-bottom"]}`}>
-        <span>useReducer </span> ...
+        <span>useReducer</span> is a powerful React hook for managing{" "}
+        <b>state</b> in
+        <span> functional components</span>, providing a more precise control
+        over <span> complex state </span> transitions than <span>useState</span>
+        , particularly when the new <b>state</b> depends on the old one.
       </h2>
 
       <form onSubmit={handleSubmit}>
@@ -70,7 +74,16 @@ export default function TodoApp() {
         <Todo key={todo.id} todo={todo} dispatch={dispatch} name={name} />
       ))}
 
-      <h2 className={`${info["info"]} ${info["border-top"]}`}>....</h2>
+      <h2 className={`${info["info"]} ${info["border-top"]}`}>
+        In this implementation, our <span> state </span> is represented as an
+        <span> array </span>, where each element is a <b>"todo"</b>{" "}
+        <span>object </span>.<br></br> <br></br>
+        These <b>"todo"</b> <span>objects </span> are structured with three
+        distinct <span>properties</span>: an identifier <span>(id)</span>, a
+        task description
+        <span> (name)</span>, and a completion <span>(status)</span> indicator
+        <b> (complete)</b> which is a <span>boolean</span>.
+      </h2>
     </>
   );
 }

@@ -11,10 +11,12 @@ export default function Todo({ todo, dispatch, name }) {
   return (
     <div key={todo.id} className={todoStyle["todo"]}>
       <h2>
-        <span>{todo.name}</span>
+        <span className={todo.complete ? todoStyle["complete"] : ""}>
+          {todo.name}
+        </span>
       </h2>
 
-      <div class={todoStyle["todo-actions"]}>
+      <div className={todoStyle["todo-actions"]}>
         <button
           className={util["button"]}
           onClick={() =>
@@ -23,9 +25,9 @@ export default function Todo({ todo, dispatch, name }) {
         >
           Toggle
         </button>
+
         <button
           className={util["button"]}
-          disabled={!name}
           onClick={() =>
             dispatch({ type: ACTIONS.DELETE_TODO, payload: { id: todo.id } })
           }

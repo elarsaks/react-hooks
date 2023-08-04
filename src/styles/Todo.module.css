@@ -21,18 +21,16 @@
     }
   }
 
-  .todo-text {
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-  }
-
   .todo-actions {
     display: flex;
     flex-direction: row;
     align-items: center; 
     justify-content: space-between;
     gap: 0px; 
+  }
+
+  .complete {
+    text-decoration: line-through;
+    color: #7e7e7e;
   }
   
