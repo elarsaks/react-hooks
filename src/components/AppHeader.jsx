@@ -40,9 +40,7 @@ export default function AppHeader() {
           </option>
           <option value="/useEffect">useEffect</option>
           <option value="/useMemo">useMemo</option>
-          <option value="/useReducer" disabled>
-            useReducer
-          </option>
+          <option value="/useReducer">useReducer</option>
           <option value="/useRef">useRef</option>
           <option value="/useState">useState</option>
           <option value="/useLayout" disabled>

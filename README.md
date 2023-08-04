@@ -2,9 +2,11 @@
 
 # React Hooks
 
-### 🚧 UNDER DEVELOPMENT 🚧 (5/9 hooks)
-
 This is a straightforward React application demonstrating the usage of 9 essential React Hooks.
+
+
+
+### [*LIVE EXAMPLE*](https://elarsaks.github.io/react-hooks/) ____ 🚧 UNDER DEVELOPMENT 🚧 (5/9 hooks)
 
 ## Introduction
 
@@ -56,4 +58,7 @@ Finally, start the development server:
 npm start
 ```
 
-Your application should now be running and accessible at http://localhost:3000.
+Your application should now be running and accessible at http://localhost:3000.  
+
+------
+![Topology Diagram](https://github.com/elarsaks/react-hooks/blob/main/public/some.png)

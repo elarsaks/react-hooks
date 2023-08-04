@@ -1,38 +1,36 @@
 /* Info.module.css */
 .info {
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 1.5;
-    color: #ffffff;
-    margin: 20px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    padding-bottom: 10px;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .info {
-      font-size: 18px;
-      margin: 10px;
-    }
-  }
-  
-  .border-top {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 5px solid #61dafb;
-  }
-  
-  .border-bottom {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  padding-bottom: 10px;
+}
 
-    padding-bottom: 20px;
-    border-bottom: 5px solid #61dafb;
+@media screen and (max-width: 600px) {
+  .info {
+    font-size: 18px;
+    margin: 10px;
   }
-  
-  .info span {
-    font-weight: bold;
-    color: #61dafb;
-  }
-  
+}
+
+.border-top {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 5px solid #61dafb;
+}
+
+.border-bottom {
+  padding-bottom: 20px;
+  border-bottom: 5px solid #61dafb;
+}
+
+.info span {
+  font-weight: bold;
+  color: #61dafb;
+}

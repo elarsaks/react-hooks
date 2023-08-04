@@ -1,18 +1,9 @@
 import React, { useState } from "react";
 import info from "../styles/Info.module.css";
 import util from "../styles/Util.module.css";
+import Button from "../components/Button";
 
 export default () => {
-  const spanStyle = {
-    margin: "20px",
-    fontSize: "24px",
-    fontWeight: "bold",
-    color: "white",
-    borderRadius: "5px",
-    border: "2px solid #61DAFB",
-    padding: "10px 20px",
-  };
-
   // Pass state initial value as a function to useState,
   // so the function is only called on the initial render.
   const [count, setCount] = useState(() => 0);
@@ -38,13 +29,16 @@ export default () => {
         user interfaces through simple initialization and updates.
       </h2>
 
-      <button className={util["button"]} onClick={handleDecrement}>
-        -
-      </button>
-      <span style={spanStyle}>{count}</span>
-      <button className={util["button"]} onClick={handleIncrement}>
-        +
-      </button>
+      <Button text="-" handleClick={handleDecrement} />
+      <span className={util["counter"]}>{count}</span>
+      <Button text="+" handleClick={handleIncrement} />
+
+      <h2 className={`${info["info"]} ${info["border-top"]}`}>
+        In this demonstration, we've leveraged the <span>useState</span> hook to
+        represent our state as a numerical count. This count can be dynamically
+        increased or decreased, offering a clear illustration of state
+        management in a <span>React functional component</span>.
+      </h2>
     </>
   );
 };
