@@ -37,6 +37,9 @@ export default function AppHeader() {
             useCustom
           </option>
           <option value="/useEffect">useEffect</option>
+          <option value="/useId" disabled>
+            useId
+          </option>
           <option value="/useMemo">useMemo</option>
           <option value="/useReducer">useReducer</option>
           <option value="/useRef">useRef</option>
