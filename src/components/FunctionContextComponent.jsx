@@ -15,7 +15,7 @@ export default () => {
     marginTop: "20px",
     marginLeft: "auto",
     marginRight: "auto",
-    maxWidth: "800px",
+    maxWidth: "750px",
   };
 
   return <div style={themeStyles}>Function Theme</div>;

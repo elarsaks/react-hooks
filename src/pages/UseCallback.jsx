@@ -21,7 +21,7 @@ export default () => {
     marginTop: "20px",
     marginLeft: "auto",
     marginRight: "auto",
-    maxWidth: "800px",
+    maxWidth: "750px",
   };
 
   return (
@@ -32,10 +32,11 @@ export default () => {
       </h2>
       <Button
         active={darkTheme}
-        handleClick={toggleTheme}
+        handleClick={() => setDarktheme((prevDarkTeme) => !prevDarkTeme)}
         text="Toggle Theme"
       />
-      ...
+      <div style={theme}> THEME </div>
+
       <h2 className={`${info["info"]} ${info["border-top"]}`}>....</h2>
     </>
   );
