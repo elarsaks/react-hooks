@@ -33,9 +33,7 @@ export default function AppHeader() {
         >
           <option value="/useCallback">useCallback</option>
           <option value="/useContext">useContext</option>
-          <option value="/useCustom" disabled>
-            useCustom
-          </option>
+          <option value="/useCustom">useCustom</option>
           <option value="/useEffect">useEffect</option>
           <option value="/useId">useId</option>
           <option value="/useMemo">useMemo</option>

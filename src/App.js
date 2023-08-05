@@ -11,6 +11,7 @@ import UseMemo from "./pages/UseMemo";
 import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
 import UseState from "./pages/UseState";
+import UseCustom from "./pages/UseCustom";
 
 export default function App() {
   // Determine the correct base URL based on the environment (local or GitHub Pages)
@@ -33,6 +34,9 @@ export default function App() {
 
             {/* UseContext Route */}
             <Route path="useContext" element={<UseContext />} />
+
+            {/* UseContext Route */}
+            <Route path="UseCustom" element={<UseCustom />} />
 
             {/* UseEffect Route */}
             <Route path="useEffect" element={<UseEffect />} />

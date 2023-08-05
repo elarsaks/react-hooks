@@ -6,7 +6,7 @@ This is a straightforward React application demonstrating the usage of 9 essenti
 
 
 
-### [*LIVE EXAMPLE*](https://elarsaks.github.io/react-hooks/) ____ 🚧 UNDER DEVELOPMENT 🚧 (5/9 hooks)
+### [*LIVE EXAMPLE*](https://elarsaks.github.io/react-hooks/) ____ 🚧 UNDER DEVELOPMENT 🚧 (8/10 hooks)
 
 ## Introduction
 
