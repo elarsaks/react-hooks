@@ -1,15 +1,16 @@
 import app from "./styles/App.module.css";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
+import AppHeader from "./components/AppHeader";
+import PageNotFound from "./pages/PageNotFound";
 import UseCallback from "./pages/UseCallback";
 import UseContext from "./pages/UseContext";
 import UseEffect from "./pages/UseEffect";
+import UseId from "./pages/UseId";
 import UseMemo from "./pages/UseMemo";
 import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
-import PageNotFound from "./pages/PageNotFound";
 import UseState from "./pages/UseState";
-import AppHeader from "./components/AppHeader";
 
 export default function App() {
   // Determine the correct base URL based on the environment (local or GitHub Pages)
@@ -35,6 +36,9 @@ export default function App() {
 
             {/* UseEffect Route */}
             <Route path="useEffect" element={<UseEffect />} />
+
+            {/* UseId Route */}
+            <Route path="useId" element={<UseId />} />
 
             {/* UseMemo Route */}
             <Route path="useMemo" element={<UseMemo />} />

@@ -5,9 +5,6 @@ import util from "../styles/Util.module.css";
 import Button from "../components/Button";
 import List from "../components/List";
 
-// Create a context for theme
-export const ThemeContext = React.createContext();
-
 // Default component function
 export default () => {
   // Create state for number and darkTheme using useState hook
