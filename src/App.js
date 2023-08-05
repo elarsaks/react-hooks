@@ -5,13 +5,14 @@ import AppHeader from "./components/AppHeader";
 import PageNotFound from "./pages/PageNotFound";
 import UseCallback from "./pages/UseCallback";
 import UseContext from "./pages/UseContext";
+import UseCustom from "./pages/UseCustom";
 import UseEffect from "./pages/UseEffect";
 import UseId from "./pages/UseId";
+import UseLayout from "./pages/UseLayout";
 import UseMemo from "./pages/UseMemo";
 import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
 import UseState from "./pages/UseState";
-import UseCustom from "./pages/UseCustom";
 
 export default function App() {
   // Determine the correct base URL based on the environment (local or GitHub Pages)
@@ -52,6 +53,9 @@ export default function App() {
 
             {/* UseRef Route */}
             <Route path="useRef" element={<UseRef />} />
+
+            {/* UseRef Route */}
+            <Route path="useLayout" element={<UseLayout />} />
 
             {/* Page Not Found Route */}
             <Route path="*" element={<PageNotFound />} />
