@@ -33,18 +33,14 @@ export default function AppHeader() {
         >
           <option value="/useCallback">useCallback</option>
           <option value="/useContext">useContext</option>
-          <option value="/useCustom" disabled>
-            useCustom
-          </option>
+          <option value="/useCustom">useCustom</option>
           <option value="/useEffect">useEffect</option>
           <option value="/useId">useId</option>
+          <option value="/useLayoutEffect">useLayoutEffect</option>
           <option value="/useMemo">useMemo</option>
           <option value="/useReducer">useReducer</option>
           <option value="/useRef">useRef</option>
           <option value="/useState">useState</option>
-          <option value="/useLayout" disabled>
-            useLayout
-          </option>
         </select>
       </div>
     </div>

@@ -5,8 +5,10 @@ import AppHeader from "./components/AppHeader";
 import PageNotFound from "./pages/PageNotFound";
 import UseCallback from "./pages/UseCallback";
 import UseContext from "./pages/UseContext";
+import UseCustom from "./pages/UseCustom";
 import UseEffect from "./pages/UseEffect";
 import UseId from "./pages/UseId";
+import UseLayoutEffect from "./pages/UseLayoutEffect";
 import UseMemo from "./pages/UseMemo";
 import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
@@ -14,7 +16,7 @@ import UseState from "./pages/UseState";
 
 export default function App() {
   // Determine the correct base URL based on the environment (local or GitHub Pages)
-  const baseUrl = process.env.NODE_ENV === "production" ? "/react-hooks" : "";
+  const baseUrl = process.env.NODE_ENV === "production" ? "" : "/react-hooks";
 
   return (
     <BrowserRouter basename={baseUrl}>
@@ -34,6 +36,9 @@ export default function App() {
             {/* UseContext Route */}
             <Route path="useContext" element={<UseContext />} />
 
+            {/* UseContext Route */}
+            <Route path="UseCustom" element={<UseCustom />} />
+
             {/* UseEffect Route */}
             <Route path="useEffect" element={<UseEffect />} />
 
@@ -48,6 +53,9 @@ export default function App() {
 
             {/* UseRef Route */}
             <Route path="useRef" element={<UseRef />} />
+
+            {/* UseRef Route */}
+            <Route path="useLayoutEffect" element={<UseLayoutEffect />} />
 
             {/* Page Not Found Route */}
             <Route path="*" element={<PageNotFound />} />
