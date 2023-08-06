@@ -15,11 +15,8 @@ import UseRef from "./pages/UseRef";
 import UseState from "./pages/UseState";
 
 export default function App() {
-  // Determine the correct base URL based on the environment (local or GitHub Pages)
-  const baseUrl = process.env.NODE_ENV === "production" ? "" : "/react-hooks";
-
   return (
-    <BrowserRouter basename={baseUrl}>
+    <BrowserRouter basename={"/react-hooks"}>
       <div className={app["App"]}>
         <AppHeader />
         <Routes>
