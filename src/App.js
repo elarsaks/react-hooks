@@ -16,7 +16,7 @@ import UseState from "./pages/UseState";
 
 export default function App() {
   // Determine the correct base URL based on the environment (local or GitHub Pages)
-  const baseUrl = process.env.NODE_ENV === "production" ? "/react-hooks" : "";
+  const baseUrl = process.env.NODE_ENV === "production" ? "" : "/react-hooks";
 
   return (
     <BrowserRouter basename={baseUrl}>
