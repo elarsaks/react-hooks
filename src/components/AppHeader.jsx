@@ -36,7 +36,7 @@ export default function AppHeader() {
           <option value="/useCustom">useCustom</option>
           <option value="/useEffect">useEffect</option>
           <option value="/useId">useId</option>
-          <option value="/useLayout">useLayout</option>
+          <option value="/useLayoutEffect">useLayoutEffect</option>
           <option value="/useMemo">useMemo</option>
           <option value="/useReducer">useReducer</option>
           <option value="/useRef">useRef</option>

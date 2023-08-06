@@ -21,7 +21,7 @@ If you face similar challenges with React Hooks, you're welcome to use this code
 - [useCustomHook](https://react.dev/reference/react/useCustomHook)
 - [useEffect](https://react.dev/reference/react/useEffect)
 - [useId](https://react.dev/reference/react/useId)
-- [useLayout](https://react.dev/reference/react/useLayout)
+- [useLayoutEffect](https://react.dev/reference/react/useLayoutEffect)
 - [useMemo](https://react.dev/reference/react/useMemo)
 - [useReducer](https://react.dev/reference/react/useReducer)
 - [useRef](https://react.dev/reference/react/useRef)

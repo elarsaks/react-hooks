@@ -8,7 +8,7 @@ import UseContext from "./pages/UseContext";
 import UseCustom from "./pages/UseCustom";
 import UseEffect from "./pages/UseEffect";
 import UseId from "./pages/UseId";
-import UseLayout from "./pages/UseLayout";
+import UseLayoutEffect from "./pages/UseLayoutEffect";
 import UseMemo from "./pages/UseMemo";
 import UseReducer from "./pages/UseReducer";
 import UseRef from "./pages/UseRef";
@@ -55,7 +55,7 @@ export default function App() {
             <Route path="useRef" element={<UseRef />} />
 
             {/* UseRef Route */}
-            <Route path="useLayout" element={<UseLayout />} />
+            <Route path="useLayoutEffect" element={<UseLayoutEffect />} />
 
             {/* Page Not Found Route */}
             <Route path="*" element={<PageNotFound />} />
