@@ -2,7 +2,7 @@
 
 # React Hooks
 
-This is a straightforward React application demonstrating the usage of 9 essential React Hooks.
+This is a simple React application demonstrating the usage of 10 essential React Hooks.
 
 ### [*LIVE EXAMPLE*](https://elarsaks.github.io/react-hooks/) 
 
