@@ -3,8 +3,10 @@ import { useNavigate, useLocation } from "react-router-dom";
 import logo from "../logo.svg";
 import header from "../styles/AppHeader.module.css";
 import app from "../styles/App.module.css";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 export default function AppHeader() {
+  useDocumentTitle(); // Custom hook to update the document title
   const navigate = useNavigate();
   const location = useLocation();
   const [selectedOption, setSelectedOption] = useState(location.pathname);
